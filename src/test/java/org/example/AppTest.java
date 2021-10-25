@@ -19,7 +19,7 @@ public class AppTest
         int summ = 100000;
         int procent = 12;
         double sumCreditInMonth = creditCalculator.summCreditInMonth();
-        assertTrue("Неверная сумма выплаты в месяц" , (summ * (1 + years * procent/100))/(years * 12) == sumCreditInMonth );
+        assertTrue("Неверная сумма выплаты в месяц" , (summ * (1 + years * procent / 100))/(years * 12) == sumCreditInMonth );
     }
     @Test
     public void testCommonSummCredit(){
@@ -28,7 +28,7 @@ public class AppTest
         int summ = 100000;
         int procent = 12;
         double commonSummCredit = creditCalculator.commonSummCredit();
-        assertTrue("Неверная полная сумма кредита" , (summ * (1 + years * procent/100)) == commonSummCredit );
+        assertTrue("Неверная полная сумма кредита" , ((summ * years * procent / 100) + summ) == commonSummCredit );
     }
     @Test
     public void testSummCreditOverpayment(){

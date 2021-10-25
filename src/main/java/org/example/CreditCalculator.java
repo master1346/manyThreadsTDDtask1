@@ -12,14 +12,14 @@ public class CreditCalculator {
     }
 
     public double summCreditInMonth() {
-        return 0.0;
+        return ((summ * (1 + years * procent / 100))/( years * 12));
     }
 
     public double commonSummCredit() {
-        return 0.0;
+        return ((summ * years * procent / 100) + summ);
     }
 
     public double summCreditOverpayment() {
-        return 0.0;
+        return (summ * years * procent / 100);
     }
 }
